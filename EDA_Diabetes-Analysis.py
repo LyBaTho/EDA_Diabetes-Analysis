@@ -1,3 +1,17 @@
+"""
+| Field                         | Description                                                                           |
+|-------------------------------|---------------------------------------------------------------------------------------|
+| Pregnancies                   | Whether a patient is pregnant or not                                                  |
+| Glucose                       | Refers to elevated blood glucose levels                                               |
+| BloodPressure                 | A common comorbidity in diabetes                                                      |
+| SkinThickness                 | Certain complications of diabetes can be spotted through skin thickness               |
+| Insulin                       | Hormone produced by the pancreas that helps regulate blood sugar levels               |
+| BMI                           | BMI metrics of a patient                                                              |
+| DiabetesPedigreeFunction      | The likelihood of an individual developing diabetes based on the family history       |
+| Age                           | Age of patient                                                                        |
+
+"""
+
 import pandas as pd
 import numpy as np
 import warnings
@@ -150,7 +164,7 @@ col1 = 'Outcome'
 alpha = 0.05
 for i in range(0, len(num_cols)):
     col2 = num_cols[i]
-    print('2 variables:', col1, 'và', col2)
+    print('2 variables:', col1, 'and', col2)
     variables_cont_cat(data, col1, col2)
     print()
 
@@ -270,8 +284,8 @@ Comment:
 
 Comment:
 
-Due to the presence of many outliers in BloodPressure + No correlation with the output (Disease and Non-disease) 
-from the ANOVA analysis + weak correlation with other input variables (such as Insulin or DiabetesPedigreeFunction) 
+Due to the presence of many outliers in BloodPressure + No correlation with the output (Disease and Non-disease) from the 
+ANOVA analysis + weak correlation with other input variables (such as Insulin or DiabetesPedigreeFunction) 
     => Consider removing the BloodPressure variable before including it in the model.
 """
 
